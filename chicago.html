@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Chicago - Rambling Man</title>
+<link rel="stylesheet" type="text/css" href="./stylesheet/chicago_style.css">
+<script type="text/javascript">
+	function subscribe() {
+		var emailId = document.getElementById("email").value;
+		var name = document.getElementById("name").value;
+		var to = 'hema.g.bahirwani@gmail.com';
+		var subject = "worked"
+		var message = "you rock";
+		var str = 'http://mail.google.com/mail/?view=cm&fs=1' + '&to=' + to
+				+ '&su=' + subject + '&body=' + message + '&ui=1';
+		location.href = str;
+	}
+</script>
+</head>
+<body>
+	<div class="gradientDiv">
+		<div class="leftDiv">
+			<div class="breadcrumb">
+				You are here: <a href="newhome.html">Home</a> / Chicago
+			</div>
+			<article>
+				<img width="100%" height="auto"
+					src="images/chicago/chicago bean.jpg"
+					sizes="(max-width: 768px) 100vw, 768px" scale="0">
+				<header class="entry-header">
+					<h2 class="headers">Cloud Gate, Millenium Park, Chicago</h2>
+				</header>
+				<p class="paragraph">The Cloud Gate Sculpture, also known as the
+					"bean," is one of the highlights of Millennium Park. Designed by
+					the artists Anish Kapoor, the Chicago the Bean sculpture is made of
+					168 highly polished stainless steel plates - giving the appearance
+					of liquid mercury. Up close, the highly reflective nature of the
+					sculpture captures the beautiful skyline of Chicago. The Cloud Gate
+					Sculpture has thus become a tourist hot spot and is the perfect
+					place to take your vacation snapshots.</p>
+				<footer class="entry-footer"></footer>
+			</article>
+
+			<article>
+				<img width="100%" height="auto" src="images/chicago/dino.jpg"
+					sizes="(max-width: 768px) 100vw, 768px" scale="0">
+				<header class="entry-header">
+					<h2 class="headers">The Field Museum, Chicago</h2>
+				</header>
+				<p class="paragraph">The Field Museum of Natural History is a
+					natural history museum in Chicago, and is one of the largest such
+					museums in the world. The museum maintains its status as a premier
+					natural history museum through the size and quality of its
+					educational and scientific programs, as well as due to its
+					extensive scientific specimen and artifact collections./p>
+				<footer class="entry-footer"></footer>
+			</article>
+
+			<article>
+				<img width="100%" height="auto" src="images/chicago/aquarium.jpg"
+					sizes="(max-width: 768px) 100vw, 768px" scale="0">
+				<header class="entry-header">
+					<h2 class="headers">Shedd Aquarium, Chicago</h2>
+				</header>
+				<p class="paragraph">Shedd Aquarium (formally the John G. Shedd
+					Aquarium) is an indoor public aquarium in Chicago, Illinois in the
+					United States that opened on May 30, 1930. The aquarium contains
+					32,000 animals,[1] and was for some time the largest indoor
+					aquarium in the world with 5,000,000 US gallons (19,000,000 l;
+					4,200,000 imp gal) of water. Shedd Aquarium was the first inland
+					aquarium with a permanent saltwater fish collection./p>
+				<footer class="entry-footer"></footer>
+			</article>
+
+			<article>
+				<img width="100%" height="auto" src="images/chicago/pizza.jpg"
+					sizes="(max-width: 768px) 100vw, 768px" scale="0">
+				<header class="entry-header">
+					<h2 class="headers">Lou Malnati's Deep Dish Pizza</h2>
+				</header>
+				<p class="paragraph">The most famous of all Chicago-style
+					pizzas, deep dish pizza are baked in a pan, giving the pizza it's
+					characteristically high edge and deep surface for large amounts of
+					cheese and chunky tomato sauce. We got the Chicago classic (lean
+					sausage, extra cheese and tomatoes on butter crust) and the Lou
+					(spinach mix, mushrooms and sliced Roma tomatoes with a melange of
+					3 cheeses)</p>
+			</article>
+		</div>
+
+		<aside class="rightDiv">
+			<section>
+				<h2 class="headerWidget">Rambling Man</h2>
+				<p class="paragraph">
+					<span class="alignleft"><img alt="Saket Hegde"
+						src="images/ramblingman.png" width="125" height="125"
+						style="border-radius: 65px"></span>I am Saket, travel writer and
+					photographer who has been travelling the world since 2012.
+					Currently, gambling, shopping, fine dining, and enjoyong the
+					nightlife in Las Vegas. <a class="pagelink" href="about.html/">Want
+						to know more?</a>
+				</p>
+			</section>
+
+			<section>
+				<h2 class="headerWidget">Follow me on</h2>
+
+				<a
+					href="https://www.facebook.com/Ramblin_man_-920772067976352/?fref=ts"
+					class="et_social_follow" data-social_name="facebook"
+					data-social_type="follow" data-post_id="0" target="_blank"> <img
+					src="images/facebook.png" width="60" height="60">
+				</a> <a href="https://www.instagram.com/_ramblin_man_/"
+					class="et_social_follow" data-social_name="instagram"
+					data-social_type="follow" data-post_id="0" target="_blank"> <img
+					src="images/instagram.png" width="60" height="60">
+				</a>
+			</section>
+			<section>
+				<h2 class="headerWidget">I am in: New Brunswick, New Jersey</h2>
+
+				<img
+					src="https://maps.googleapis.com/maps/api/staticmap?center=New+Brunswick&zoom=13&size=300x300&maptype=roadmap&markers=color:red%7Clabel:C%7C40.4867,-74.4444&key=AIzaSyDUItf3S4lwtdQFu4fuwJshR00NfOsYXJc">
+			</section>
+			<section>
+				<h3 style="margin-bottom: 10px">Wanna join me on my next trip?
+					Sign up to find out about our upcoming journey, adventures and
+					stories.</h3>
+				<input type="email" id="email" placeholder="Email?"
+					class="input-field"> <input type="text" id="name"
+					placeholder="Full Name?" class="input-field">
+				<button type="button" onclick="subscribe()" class="buttonField">Sign
+					Up!</button>
+			</section>
+		</aside>
+	</div>
+</body>
+</html>

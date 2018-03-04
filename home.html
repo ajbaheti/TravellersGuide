@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="./stylesheet/style.css">
+		<link rel="stylesheet" type="text/css" href="./stylesheet/menubar.css">
+		<title>Rambling Man</title>
+		<script type="text/javascript" src="./scripts/menubar.js"></script>
+		<script type="text/javascript" src="./scripts/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="./scripts/instagram.js"></script>
+	</head>
+	
+	<body onload="callService()">
+		<div class="gradientDiv">
+			
+			<div class="upperImage">
+				<h1 style="text-align:center">welcome</h1>
+			</div>
+			
+			<div>
+				<ul id="sddm">
+    				<li><a href="#" onmouseover="mopen('m1')" onmouseout="mclosetime()">Destinations</a>
+        				<div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+        					<a href="#" onmouseover="mopen(m5)" onmouseout="mclosetime()">America</a>
+        						<div id="m5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+        							<a href="ny.html">Europe</a>
+					        		<a href="sf.html">Ink</a>      						
+        						</div>
+        					<a href="ny.html">Europe</a>
+        					<a href="ny.html">Europe1</a>
+        				</div>
+    				</li>
+    				<li><a href="#" onmouseover="mopen('m2')" onmouseout="mclosetime()">Food</a>
+        				<div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+        					<a href="time_table.html">Chinese</a>
+        					<a href="time_table.html">Indian</a>
+        					<a href="time_table.html">Italian</a>
+        					<a href="time_table.html">Sea Food</a>
+        				</div>
+    				</li>
+					<li><a href="#" onmouseover="mopen('m3')" onmouseout="mclosetime()">Articles</a>
+						<div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+        					<a href="time_table.html">Article 1</a>
+        					<a href="time_table.html">Article 2</a>
+        					<a href="time_table.html">Article 3</a>
+        				</div>
+					</li>
+					<li><a href=''>Travel Tips</a></li>
+					<li><a href=''>About</a></li>
+				</ul>
+			</div>
+			
+			<div id="imagediv">
+				<!-- <img id="mainimage" src="./images/nomad.jpg"> -->
+			</div>
+			
+			<div id="container">
+				<div id="containerLeft">
+					<div id="instaimages">
+						<div><h1 style="text-align:center">Latest Posts</h1></div>
+						<div class="square"><img id="img1"/></div>
+					    <div class="square"><img id="img2"/></div>
+					    <div class="square"><img id="img3"/></div>
+					    <div class="square"><img id="img4"/></div>
+					    <div class="square"><img id="img5"/></div>
+					    <div class="square"><img id="img6"/></div>
+					    <div class="square"><img id="img7"/></div>
+					    <div class="square"><img id="img8"/></div>
+					    <div class="square"><img id="img9"/></div>
+					</div>
+				</div>
+				<div id="containerRight">
+					<section>
+						<h2 class="headerWidget">Rambling Man</h2>
+						<p class="paragraph">
+							<span class="alignleft"><img alt="Saket Hegde"
+								src="images/ramblingman.png" width="125" height="125"
+								style="border-radius: 65px"></span>I am Saket, travel writer and
+									photographer who has been travelling the world since 2012.
+									Currently, gambling, shopping, fine dining, and enjoyong the
+									nightlife in Las Vegas. <a class="pagelink" href="about.html/">Want
+									to know more?</a>
+						</p>
+					</section>
+
+					<section>
+						<h2 class="headerWidget">Follow me on</h2>
+						<a href="https://www.facebook.com/Ramblin_man_-920772067976352/?fref=ts"
+							class="et_social_follow" data-social_name="facebook"
+							data-social_type="follow" data-post_id="0" target="_blank"> <img
+							src="images/facebook.png" width="60" height="60"></a> 
+						<a href="https://www.instagram.com/_ramblin_man_/"
+							class="et_social_follow" data-social_name="instagram"
+							data-social_type="follow" data-post_id="0" target="_blank"> <img
+							src="images/instagram.png" width="60" height="60">
+						</a>
+					</section>
+					
+					<section>
+						<h2 class="headerWidget">I am in: New Brunswick, New Jersey</h2>		
+						<img
+							src="https://maps.googleapis.com/maps/api/staticmap?center=New+Brunswick&zoom=13&size=300x300&maptype=roadmap&markers=color:red%7Clabel:C%7C40.4867,-74.4444&key=AIzaSyDUItf3S4lwtdQFu4fuwJshR00NfOsYXJc">
+					</section>
+					
+					<section>
+						<h3 style="margin-bottom: 10px">Wanna join me on my next trip?
+							Sign up to find out about our upcoming journey, adventures and
+							stories.</h3>
+						<input type="email" id="email" placeholder="Email?"
+							class="input-field"> <input type="text" id="name"
+							placeholder="Full Name?" class="input-field">
+						<button type="button" onclick="subscribe()" class="buttonField">Sign Up !</button>
+					</section>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

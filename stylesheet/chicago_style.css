@@ -1,0 +1,117 @@
+.gradientDiv{
+	margin: auto;
+    width: 80%;
+    padding: 15px;
+    overflow: hidden;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e5e5e5+100;White+3D */
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+}
+
+.breadcrumb {
+	font-size: 14px;
+	margin: 11px 0 30px;
+	padding: 0 0 10px;
+	border-bottom: 1px solid #aaa;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #aaa;
+	width: 100%;
+}
+
+.headers {
+	background: #313131;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 15px 0;
+}
+
+.paragraph {
+	color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px font-weight:400;
+	line-height: 1.5625;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+hr {
+	width: 90%
+}
+
+.leftDiv {
+	float: left;
+	width: 70%;
+}
+
+.entry-footer {
+	line-height: 1.5625;
+	height: 20px;
+}
+
+.rightDiv {
+	display: inline;
+	float: right;
+	font-size: 14px;
+	width: 26%;
+}
+
+.pagelink {
+	color: #5abe01;
+}
+
+.et_social_follow {
+	/* display: -webkit-box; */
+	margin-left: 15%;/* 50%; */
+	padding-bottom: 10%;
+}
+
+.alignleft {
+	float: left;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	border-radius: 65px;
+}
+
+article {
+	margin: 0 0 50px;
+	padding: 0 0 20px;
+	border-bottom: 1px solid #aaa;
+}
+
+.headerWidget {
+	border-bottom: 1px solid #aaa;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.input-field {
+	border: 1px solid #ccc;
+	display: block;
+	color: rgba(0, 0, 0, 0.75);
+	font-size: 14px;
+	padding: 3px;
+	height: 30px;
+	width: 100%;
+	margin-bottom:2%
+}
+
+.buttonField {
+	    color: #FFFFFF;
+    background-color: #31ba0f;
+    width: 100%;
+    display: block;
+    height: 40px;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+   /*  margin-left: 4%; */
+    border: 0px;
+    border-radius: 10px;
+    margin-top: 4%;}

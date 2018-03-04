@@ -1,0 +1,221 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="./stylesheet/style.css">
+<link rel="stylesheet" type="text/css" href="./stylesheet/menubar.css">
+<link rel="stylesheet" type="text/css" href="./stylesheet/bootstrap.min.css">
+
+<title>Rambling Man</title>
+
+<script type="text/javascript" src="./scripts/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="./scripts/menubar.js"></script>
+<script type="text/javascript" src="./scripts/angular.min.js"></script>
+<script type="text/javascript" src="./scripts/instagram.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="Example">
+	<div class="gradientDiv">
+
+		<div class="upperImage">
+			<h1 style="text-align: center"></h1>
+		</div>
+		
+		<div>
+			<ul id="nav">
+    			<li class="destinations"><a href="#">Destinations</a>
+	        		<ul>
+	        			<li><a href="#">America »</a>            
+	            			<ul>
+	                			<li><a href="chicago.html">Chicago</a></li>
+				                <li><a href="ny.html">New York</a></li>
+				                <li><a href="sf.html">San Franscisco</a></li>
+				                <!-- <li><a href="#">Skill Games »</a>
+	                				<ul>
+							            <li><a href="#">Yahoo Pool</a></li>
+							            <li><a href="#">Chess</a></li>
+					                </ul>
+                				</li> -->
+            				</ul>
+						</li>
+        				<li><a href="#">Europe</a></li>
+        				<li><a href="#">Asia  »</a>
+        					<ul>
+        						<li><a href="pondi.html">Pondicherri</a></li>
+        					</ul>
+        				</li>
+        			</ul>
+    			</li> 
+    			<li class="food"><a href="#">Food</a>
+        			<ul>
+				        <li><a href="#">Chinese</a></li>
+				        <li><a href="#">Indian</a></li>
+				        <li><a href="#">Italian</a></li>
+				        <li><a href="#">Sea Food</a></li>
+        			</ul>
+    			</li>
+    			<li class="articles"><a href="#">Articles</a>
+        			<ul>
+        				<li><a href="#">Article 1</a></li>
+        				<li><a href="#">Article 1</a></li>
+        				<li><a href="#">Article 1</a></li>
+        			</ul>
+    			</li>
+    			<li class="travel"><a href="#">Travel Tips</a></li>
+    			<li class="about"><a href="#">About</a></li>
+			</ul>	
+		</div>
+		
+		<div>
+		<div id="containerLeft">
+
+			<div ng-repeat="p in pics" class="square">
+				<a href="{{p.link}}" target="_blank"><img
+					ng-src="{{p.images.low_resolution.url}}"
+					class="img-responsive thumbnail instaimages"
+					title="{{p.caption.text}}"></a> <!-- <span
+					class="glyphicon glyphicon-heart"> {{p.likes.count}}</span> -->
+			</div>
+		</div>
+
+	<div id="containerRight">
+		<section>
+			<h2 class="headerWidget">Rambling Man</h2>
+			<p class="paragraph">
+				<span class="alignleft"><img alt="Saket Hegde"
+					src="images/ramblingman.png" width="125" height="125"
+					style="border-radius: 65px"></span>I am Saket, travel writer and
+				photographer who has been travelling the world since 2015.
+				Currently, pursuing Master's in Rochester. <a class="pagelink" href="about.html/">Want
+					to know more?</a>
+			</p>
+		</section>
+
+		<section>
+			<h2 class="headerWidget">Follow me on</h2>
+			<a
+				href="https://www.facebook.com/Ramblin_man_-920772067976352/?fref=ts"
+				class="et_social_follow" data-social_name="facebook"
+				data-social_type="follow" data-post_id="0" target="_blank"> <img
+				src="images/facebook.png" width="60" height="60"></a> <a
+				href="https://www.instagram.com/_ramblin_man_/"
+				class="et_social_follow" data-social_name="instagram"
+				data-social_type="follow" data-post_id="0" target="_blank"> <img
+				src="images/instagram.png" width="60" height="60">
+			</a>
+		</section>
+
+		<section>
+			<h2 class="headerWidget">I am in: New Brunswick, New Jersey</h2>
+			<img
+				src="https://maps.googleapis.com/maps/api/staticmap?center=New+Brunswick&zoom=13&size=300x300&maptype=roadmap&markers=color:red%7Clabel:C%7C40.4867,-74.4444&key=AIzaSyDUItf3S4lwtdQFu4fuwJshR00NfOsYXJc">
+		</section>
+
+		<section>
+			<h3 style="margin-bottom: 10px">Wanna join me on my next trip?
+				Sign up to find out about our upcoming journey, adventures and
+				stories.</h3>
+			<input type="email" id="email" placeholder="Email?"
+				class="input-field"> <input type="text" id="name"
+				placeholder="Full Name?" class="input-field">
+			<button type="button" ng-click="subscribe()" class="buttonField">Sign Up !</button>
+		</section>
+	</div>
+	</div>
+	</div>
+	<script type="text/javascript">
+		angular
+				.module("myApp", [])
+				.factory(
+						'instagram',
+						[
+								'$http',
+								function($http) {
+									return {
+										fetchPopular : function(callback) {
+
+											var endPoint = "https://api.instagram.com/v1/users/2017228644/media/recent/?access_token=2017228644.c7b6955.1a9bbc322ba54eed98d68314208adc08&callback=JSON_CALLBACK";
+											$http
+													.jsonp(endPoint)
+													.success(
+															function(response) {
+																callback(response.data);
+															});
+										}
+									}
+								} ])
+				.controller(
+						"Example",
+						function($scope, $http, $interval, $window, instagram) {
+							$scope.pics = [];
+							$scope.have = [];
+							/* $scope.orderBy = "-likes.count"; */
+							$scope.getMore = function() {
+								instagram
+										.fetchPopular(function(data) {
+											for (var i = 0; i < data.length; i++) {
+												if (typeof $scope.have[data[i].id] === "undefined") {
+													$scope.pics.push(data[i]);
+													$scope.have[data[i].id] = "1";
+												}
+											}
+										});
+							};
+							$scope.getMore();
+
+						    $scope.destination = [ {
+								name : "New York",
+								location : "ny.html"
+							}, {
+								name : "Chicago",
+								location : "chicago.html"
+							}, {
+								name : "San Francisco",
+								location : "sf.html"
+							}, {
+								name : "Mumbai",
+								location : "mumbai.html"
+							},
+
+							];
+							/* {
+								name = "New York", location = "ny.html";
+								name = "Chicago", location = "chicago.html";
+								name = "San Francisco", location = "sf.html";
+								name = "Mumbai", location = "mumbai.html";
+
+							} */
+
+							$scope.subscribe = function() {
+								var emailId = document.getElementById("email");
+								var name = document.getElementById("name");
+								if (emailId.value == "" || name.value == "") {
+									if (emailId.value == "" && name.value == "") {
+										emailId.style.border = "1px solid red";
+										name.style.border = "1px solid red"
+
+									} else if (emailId.value == "") {
+										emailId.style.border = "1px solid red"
+									} else
+										name.style.border = "1px solid red"
+								} else {
+									var to = 'ajbaheti@gmail.com';
+									var subject = "Sign Up!"
+									var message = "Hello "
+											+ name.value
+											+ ",\n <br> Thank you for your interest. <br> I will keep you posted about my upcoming travel trips and adventures."
+									var str = 'http://mail.google.com/mail/?view=cm&fs=1'
+											+ '&to='
+											+ to
+											+ '&su='
+											+ subject
+											+ '&body=' + message + '&ui=1';
+									$window.open(str);
+								}
+							}
+
+						});
+	</script>
+	
+</body>
+</html>
